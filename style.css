@@ -1,124 +1,67 @@
+/* RESET */
 * {
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* BACKGROUND */
 body {
   margin: 0;
-  background: linear-gradient(135deg, #0a3fa8, #f5b400);
   min-height: 100vh;
+  background: linear-gradient(135deg, #0b4aa2, #f1b600);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px; /* important for phones */
 }
 
-.wrapper {
-  width: 100%;
-}
-
+/* CARD */
 .card {
+  width: 92%;
+  max-width: 420px;
   background: #fff;
-  max-width: 520px;
-  width: 100%;
-  margin: auto;
-  padding: 28px 22px;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* TITLE */
+.card h2 {
   text-align: center;
-}
-
-h1 {
-  color: #0a3fa8;
+  color: #0b4aa2;
   font-size: 22px;
-  margin-bottom: 8px;
-}
-
-.subtitle {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 22px;
-  line-height: 1.5;
-}
-
-.subtitle span {
-  color: #0a3fa8;
-  font-weight: 600;
-}
-
-.form {
-  display: grid;
-  gap: 14px;
-}
-
-.field {
-  text-align: left;
-}
-
-label {
-  font-size: 13px;
-  font-weight: 600;
   margin-bottom: 6px;
-  display: block;
-  color: #333;
 }
 
-input {
+.card p {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+/* INPUTS */
+.card input {
   width: 100%;
   padding: 14px;
-  border-radius: 12px;
-  border: 2px solid #e6e6e6;
-  font-size: 15px;
-  transition: all 0.2s ease;
+  font-size: 16px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
 
-input:focus {
-  outline: none;
-  border-color: #f5b400;
-  box-shadow: 0 0 0 3px rgba(245,180,0,0.25);
-}
-
-button {
-  margin-top: 22px;
+/* BUTTON */
+.card button {
   width: 100%;
-  padding: 16px;
-  background: #0a3fa8;
-  color: #fff;
-  border: none;
-  border-radius: 14px;
-  font-size: 16px;
+  padding: 15px;
+  font-size: 17px;
   font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  background: #0b4aa2;
+  color: white;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-button:active {
+.card button:active {
   transform: scale(0.98);
-}
-
-#result {
-  margin-top: 22px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #0a3fa8;
-}
-
-/* 📱 Extra small phones */
-@media (max-width: 380px) {
-  h1 {
-    font-size: 20px;
-  }
-
-  .card {
-    padding: 22px 18px;
-  }
-
-  input {
-    padding: 12px;
-  }
-
-  button {
-    padding: 14px;
-    font-size: 15px;
-  }
 }
