@@ -10,31 +10,35 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 15px; /* important for phones */
 }
 
 .wrapper {
   width: 100%;
-  padding: 20px;
 }
 
 .card {
   background: #fff;
   max-width: 520px;
+  width: 100%;
   margin: auto;
-  padding: 40px 35px;
-  border-radius: 22px;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.2);
+  padding: 28px 22px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.18);
   text-align: center;
 }
 
 h1 {
   color: #0a3fa8;
+  font-size: 22px;
+  margin-bottom: 8px;
 }
 
 .subtitle {
   font-size: 14px;
   color: #555;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
+  line-height: 1.5;
 }
 
 .subtitle span {
@@ -44,7 +48,7 @@ h1 {
 
 .form {
   display: grid;
-  gap: 15px;
+  gap: 14px;
 }
 
 .field {
@@ -56,6 +60,7 @@ label {
   font-weight: 600;
   margin-bottom: 6px;
   display: block;
+  color: #333;
 }
 
 input {
@@ -64,6 +69,7 @@ input {
   border-radius: 12px;
   border: 2px solid #e6e6e6;
   font-size: 15px;
+  transition: all 0.2s ease;
 }
 
 input:focus {
@@ -73,19 +79,46 @@ input:focus {
 }
 
 button {
-  margin-top: 25px;
+  margin-top: 22px;
   width: 100%;
-  padding: 15px;
+  padding: 16px;
   background: #0a3fa8;
   color: #fff;
   border: none;
   border-radius: 14px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.98);
 }
 
 #result {
-  margin-top: 25px;
-  font-size: 18px;
+  margin-top: 22px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0a3fa8;
+}
+
+/* 📱 Extra small phones */
+@media (max-width: 380px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .card {
+    padding: 22px 18px;
+  }
+
+  input {
+    padding: 12px;
+  }
+
+  button {
+    padding: 14px;
+    font-size: 15px;
+  }
 }
